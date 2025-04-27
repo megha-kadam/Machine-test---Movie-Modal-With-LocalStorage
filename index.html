@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Modal</title>
+    <script src="https://kit.fontawesome.com/3c5801946c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+   <div class="container my-5">
+    <div class="row">
+        <div class="col-6">
+            <a href="index.html" class="logo">
+                <img src="./assets/images/logo.svg" alt="nfx-logo" title="nfx-logo">
+            </a>
+        </div>
+        <div class="col-6 addBtn">
+            <button class="btn btn-sm nfxBtn-primary" id="addMovie">Add Movie</button>
+        </div>
+    </div>
+   </div>
+
+   <div class="container-fluid">
+    <div class="row" id="movieList">
+        <!-- <div class="col-md-3">
+            <figure class="movieCard">
+                <img src="https://upload.wikimedia.org/wikipedia/en/1/14/Tenet_movie_poster.jpg" alt="Tenet" title="Tenet">
+
+                <figcaption>
+                    <div class="ratingTitle">
+                        <div class="row">
+                            <div class="col-10">
+                                <h3>Tenet</h3>
+                            </div>
+                            <div class="col-2">
+                                <small class="bg-warning p-2">5</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movieInfo">
+                        <h4>Tenet</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat enim fuga, natus molestiae tempore voluptas repellendus magnam eius veniam doloribus. Magni animi minima maiores, atque quia sequi ea repellat officia?</p>
+                    </div>
+                    <div class="action">
+                        <button class="btn btn-sm btn-outline-info">Edit</button>
+                        <button class="btn btn-sm btn-outline-danger">Remove</button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div> -->
+    </div>
+   </div>
+
+   <div class="backDrop modalClose" id="backDrop"></div>
+   <div class="movieModal" id="movieModal">
+        <form class="form-control" id="movieForm">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                    <h3>Add Movie Details</h3>
+                    <i class="fa-solid fa-xmark modalClose fa-2x"></i>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="movieTitle">Movie Title</label>
+                        <input type="text" required class="form-control" id="movieTitle">
+                    </div>
+                    <div class="form-group">
+                        <label for="movieImgurl">Movie Image URL</label>
+                        <input type="text" required class="form-control" id="movieImgurl">
+                    </div>
+                    <div class="form-group">
+                        <label for="movieDescription">Movie Description</label>
+                        <textarea type="text" required class="form-control" id="movieDescription"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="movieRating">Movie Rating</label>
+                        <select type="text" required class="form-control" id="movieRating">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card--footer">
+                    <button class="btn btn-sm nfxBtn-primary" id="addMovieBtn">Add Movie</button>
+                    <button class="btn btn-sm nfxBtn-primary d-none" id="updateMovieBtn">Update Movie</button>
+                    <button class="btn btn-sm nfxBtn-primary modalClose">Close</button>
+                </div>
+            </div>
+        </form>
+   </div>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
